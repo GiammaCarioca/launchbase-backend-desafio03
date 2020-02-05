@@ -20,21 +20,23 @@
 			>
 			</lottie-player>
 		</div>
-		<h1>Rocketseat</h1>
+		<h1>{{about.name}}</h1>
 	</div>
-	<h2>A menor distância entre você e seus objetivos como programador</h2>
-	<p>
-		Transforme sua carreira e seja um programador desejado no mercado, dominando
-		as ferramentas mais modernas de desenvolvimento web e mobile. Cursos e
-		treinamentos imersivos com foco nas melhores tecnologias, direto ao ponto e
-		do jeito certo.
-	</p>
-	<h3>Principais tecnologias utilizadas:</h3>
-	<ul>
-		<li>NodeJS</li>
-		<li>ReactJS</li>
-		<li>React Native</li>
-	</ul>
+	<h2>{{about.shortDescription}}</h2>
+	<p>{{about.longDescription}}</p>
+	<section class="techs">
+		<h3>As principais tecnologias utilizadas</h3>
+		<ul>
+		{% for tech in about.techs %}
+			<li>
+				<figure>
+					<img src="{{tech.image_url}}" alt="{{tech.name}}" />
+					<figcaption>{{tech.name}}</figcaption>
+				</figure>
+			</li>
+		{% endfor %}
+		</ul>
+	</section>
 </div>
 
 <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>

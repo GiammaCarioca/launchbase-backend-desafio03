@@ -35,10 +35,6 @@ h1 {
 	line-height: 1.2;
 }
 
-h2 {
-	color: var(--color-white);
-}
-
 p,
 li {
 	color: var(--color-white);
@@ -77,22 +73,22 @@ header a {
 	margin: 24px;
 }
 
-.courses-grid .starter {
+.courses-grid [data-course='starter'] {
 	background: var(--color-darkergray);
 }
 
-.courses-grid .launchbase {
+.courses-grid [data-course='launchbase'] {
 	background: var(--color-darkergray);
 }
 
-.courses-grid .gostack {
+.courses-grid [data-course='gostack'] {
 	background: var(--color-darkergray);
 }
 
 .course {
 	display: flex;
 	flex-direction: column;
-	min-width: 390x;
+	min-width: 390px;
 	/* min-height: 600px; */
 	height: max-content;
 	padding: 50px 30px;
@@ -150,6 +146,32 @@ header a {
 	margin: 32px auto;
 	font-size: 24px;
 	line-height: 34px;
+}
+
+.techs {
+	margin-top: 120px;
+}
+
+.techs h3 {
+	font-size: 24px;
+	line-height: 34px;
+	font-weight: 500;
+}
+
+.techs ul {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	list-style: none;
+	margin-top: 40px;
+	text-align: center;
+}
+
+.techs img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+	margin-bottom: 20px;
 }
 
 footer {
