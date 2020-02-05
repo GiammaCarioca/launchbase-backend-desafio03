@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+:root {
+	--color-rocket: #7159c1;
+	--color-yellow: #fad800;
+	--color-green: #50fa7b;
+	--color-orange: #ff9600;
+	--color-gray: #282a36;
+	--color-darkergray: #242630;
+	--color-black: #0b0a0d;
+	--color-white: #fff;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	background: var(--color-gray);
+}
+
+h1,
+h2,
+h3 {
+	color: var(--color-yellow);
+	text-align: center;
+}
+
+h1 {
+	margin-top: 40px;
+	line-height: 1.2;
+}
+
+h2 {
+	color: var(--color-white);
+}
+
+p,
+li {
+	color: var(--color-white);
+}
+
+header,
+footer {
+	background: var(--color-darkergray);
+	padding: 30px;
+}
+
+header ul li {
+	list-style: none;
+	display: inline-block;
+}
+
+header ul li:not(:first-child) {
+	margin-left: 30px;
+}
+
+header a {
+	color: var(--color-white);
+	font-weight: 700;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+main {
+	min-height: 100vh;
+}
+
+.rocketseat {
+	display: grid;
+	place-content: center;
+	margin: 40px 0 0 0;
+}
+
+.frame-logo {
+	width: 360px;
+	height: 360px;
+	clip-path: circle(50% at 50% 50%);
+	position: relative;
+}
+
+.frame-logo:before {
+	content: '';
+	width: 350px;
+	height: 350px;
+	position: absolute;
+	display: block;
+	top: 5px;
+	left: 5px;
+	background: var(--color-black);
+	clip-path: circle(50% at 50% 50%);
+}
+
+/* .logo-img path {
+	fill: var(--color-black);
+} */
+
+.wrapper {
+	max-width: 940px;
+	margin: 0 auto;
+}
+
+.wrapper h2 {
+	font-size: 24px;
+	line-height: 34px;
+	font-weight: 500;
+	margin-top: 8px;
+}
+
+.wrapper p {
+	margin: 32px auto;
+	font-size: 24px;
+	line-height: 34px;
+}
+
+footer {
+	margin-top: 40px;
+	text-align: center;
+	display: flex;
+	justify-content: space-around;
+}
+
+.social a {
+	color: var(--color-white);
+	font-size: 18px;
+	line-height: 28px;
+	margin: 0 16px;
+	text-decoration: none;
+	border-bottom: 2px solid var(--color-yellow);
+}
+
+.social a:hover {
+	color: var(--color-yellow);
+	transition: color 200ms;
+}

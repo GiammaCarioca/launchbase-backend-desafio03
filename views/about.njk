@@ -1,0 +1,41 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+<title>Sobre Rocketseat</title>
+{% endblock %}
+
+{% block content %}
+<div class="wrapper">
+	<div class="rocketseat">
+		<div class="frame-logo">
+			<!-- <img src="assets/logo-rocketseat.svg" alt="Rocketseat"
+					class="logo-img" style="transform:scale(2.5)""; /> -->
+			<lottie-player
+				src="https://assets10.lottiefiles.com/private_files/lf30_9klG1Z.json"
+				background="#fad800"
+				speed="1"
+				style="width: 360px; height: 360px;"
+				autoplay
+				loop
+			>
+			</lottie-player>
+		</div>
+		<h1>Rocketseat</h1>
+	</div>
+	<h2>A menor distância entre você e seus objetivos como programador</h2>
+	<p>
+		Transforme sua carreira e seja um programador desejado no mercado, dominando
+		as ferramentas mais modernas de desenvolvimento web e mobile. Cursos e
+		treinamentos imersivos com foco nas melhores tecnologias, direto ao ponto e
+		do jeito certo.
+	</p>
+	<h3>Principais tecnologias utilizadas:</h3>
+	<ul>
+		<li>NodeJS</li>
+		<li>ReactJS</li>
+		<li>React Native</li>
+	</ul>
+</div>
+
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+{% endblock %}
