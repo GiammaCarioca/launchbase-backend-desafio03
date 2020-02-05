@@ -66,8 +66,43 @@ header a {
 	text-decoration: none;
 }
 
-main {
+/* main {
 	min-height: 100vh;
+} */
+
+.courses-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 24px;
+	margin: 24px;
+}
+
+.courses-grid .starter {
+	background: var(--color-darkergray);
+}
+
+.courses-grid .launchbase {
+	background: var(--color-darkergray);
+}
+
+.courses-grid .gostack {
+	background: var(--color-darkergray);
+}
+
+.course {
+	display: flex;
+	flex-direction: column;
+	min-width: 390x;
+	/* min-height: 600px; */
+	height: max-content;
+	padding: 50px 30px;
+	cursor: pointer;
+}
+
+.course-info {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 50px;
 }
 
 .rocketseat {
@@ -136,4 +171,67 @@ footer {
 .social a:hover {
 	color: var(--color-yellow);
 	transition: color 200ms;
+}
+
+/*=== MODAL ===*/
+.modal-overlay {
+	background: rgba(113, 85, 196, 0.9);
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	visibility: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.modal {
+	background: var(--color-gray);
+	min-width: 660px;
+	min-height: 412px;
+	height: 80vh;
+	position: relative;
+	border-radius: 16px;
+	padding: 40px 40px 20px 40px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	position: relative;
+}
+
+.modal iframe {
+	width: 100%;
+	height: 100%;
+}
+
+.modal button {
+	color: #999;
+	font-size: 24px;
+	background: none;
+	border: none;
+	cursor: pointer;
+	padding: 5px 10px;
+}
+
+#close-modal {
+	margin-top: 20px;
+	color: #50fa7b;
+	text-transform: uppercase;
+}
+
+#maximize-modal {
+	display: block;
+	width: 36px;
+	height: 36px;
+	margin: 5px;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+/*=== MODAL.ACTIVE ===*/
+.modal-overlay.active {
+	opacity: 1;
+	visibility: visible;
 }

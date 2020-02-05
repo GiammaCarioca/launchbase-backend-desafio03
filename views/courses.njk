@@ -1,10 +1,42 @@
 {% extends "layout.njk" %}
 
 {% block head %}
-<title>Cursos Rocketseat</title>
+<title>Conteúdos Rocketseat</title>
 {% endblock %}
 
 {% block content %}
-<h1>CURSOS</h1>
-<main></main>
+<h1>Conteúdos</h1>
+  <main class="courses-grid">
+    <div class="card course starter">
+      <h2><img src="64c237ccff807c054339a62d53b4b402.svg" alt="Starter" class="logo-img"/> </h2>
+      <div class="course-info">
+        <p>5 módulos</p>
+        <p>gratuito</p>
+      </div>
+    </div>
+    <div class="card course launchbase">
+      <h2><img src="0828532024cb46921a6b5e941f8d788d.svg" alt="Launchbase" class="logo-img"></h2>
+      <div class="course-info">
+        <p>10 módulos</p>
+        <p>pago</p>
+      </div>
+    </div>
+    <div class="card course gostack">
+      <h2><img src="83a178a0653dab1d55e2ed7946465975.svg" alt="Gostack" class="logo-img"></h2>
+      <div class="course-info">
+        <p>17 módulos</p>
+        <p>pago</p>
+      </div>
+    </div>
+  </main>
+
+  <div class="modal-overlay">
+    <div class="modal">
+      <iframe src="https://rocketseat.com.br/starter"></iframe> 
+      <button id="close-modal">Fechar</button>
+      <button id="maximize-modal"><img src="expand-solid.svg" alt="maximize" style="transform:scale(1.5)"></button>
+    </div>
+  </div>  		
+
+	<script src="scripts.js"></script>
 {% endblock %}
