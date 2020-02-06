@@ -2,15 +2,17 @@
 
 {% block head %}
 <title>Conteúdos Rocketseat</title>
-<script src="/scripts.js"></script>
 {% endblock %}
 
 {% block content %}
+
 <h1>Conteúdos</h1>
   <main class="courses-grid">
     {% for course in courses %}
       <div class="card course" id={{course.id}} data-course="{{course.urn}}">
-        <h2><img src="{{course.img}}" alt="{{course.title}}" class="logo-img"/></h2>
+        <h2>
+          <img src="{{course.img}}" alt="{{course.title}}" class="logo-img"/>
+        </h2>
         <div class="course-info">
           <p>{{course.duration}}</p>
           <p>{{course.price}}</p>
@@ -18,5 +20,9 @@
       </div>
     {% endfor %}
   </main>
-  
+
+{% endblock %}
+
+{% block js %}
+<script src="/scripts.js"></script>
 {% endblock %}
