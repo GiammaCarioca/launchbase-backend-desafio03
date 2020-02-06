@@ -17,6 +17,18 @@ server.get('/', (req, res) => {
 	return res.render('courses', { courses })
 })
 
+server.get('/courses/:id', (req, res) => {
+	const { id } = req.query
+
+	const course = courses.find(course => course.id == id)
+
+	if (!course) {
+		return res.send('Course not found')
+	}
+
+	return res.render('course', { course })
+})
+
 server.get('/about', (req, res) => {
 	const about = {
 		name: 'Rocketseat',
