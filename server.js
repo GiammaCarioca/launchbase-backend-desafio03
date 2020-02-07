@@ -18,7 +18,7 @@ server.get('/', (req, res) => {
 })
 
 server.get('/courses/:id', (req, res) => {
-	const { id } = req.query
+	const { id } = req.params
 
 	const course = courses.find(course => course.id == id)
 
